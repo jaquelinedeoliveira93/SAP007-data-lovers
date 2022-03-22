@@ -1,6 +1,4 @@
 import {sortCountry} from './data.js';
-import athletes from './data/athletes/athletes.js';
-
 import data from './data/athletes/athletes.js';
 
 function showCards(data){
@@ -24,7 +22,7 @@ function showCards(data){
           <li class="contents-country">Total Athletes: ${listCountry[country].length}</li>
         </ol>
       </div>`
-    };
+    }
   document.getElementById("cards-countries").innerHTML = cardsCountry;
 }
 showCards(data.athletes)
@@ -34,10 +32,10 @@ function changeSelectCountry (evento){
   const selectCountry = evento.target.value
   const result = sortCountry(data.athletes, selectCountry)
   showCards(result)
-  console.log(selectCountry)
 }
 
-const buttonClean = document.getElementById("clean-button").addEventListener("click", cleanOrder)
+const buttonClean = document.getElementById("clean-button")
+buttonClean.addEventListener("click", cleanOrder)
 function cleanOrder() {
   window.location.reload();
 }
