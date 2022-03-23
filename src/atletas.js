@@ -9,14 +9,14 @@ const cartasAtletas = data.map((atletas)=>{
     </li> <li class="conteudo-atletas">${atletas.team}</li>
     <li class="conteudo-atletas">${atletas.sport}</li>
     <li class="conteudo-atletas">${atletas.medal}</li></ol></div>`})
-  
+
   document.getElementById("cards-atletas").innerHTML = cartasAtletas.join("");
 }
 
 showCards(data.athletes)
 
 
-//Função para que o card apareça assim que o usuário escrever o nome do atleta 
+//Função para que o card apareça assim que o usuário escrever o nome do atleta
 
 document.getElementById("filterAth").addEventListener("keypress", changeFilter)
 function changeFilter(evento){
