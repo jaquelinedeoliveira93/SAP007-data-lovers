@@ -15,7 +15,7 @@
 }
 
 .menu {
-  padding-top: 3%;
+  padding-top: 2%;
   padding-left: 7%;
 }
 
@@ -30,7 +30,7 @@
 .links{
   text-decoration: none;
   color: #0d4b92;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   font-weight: bold;
   background-color: transparent;
 }
@@ -130,11 +130,11 @@
 @media screen and (min-width: 1024px){
 
 .item-menu {
-  padding-left: 4%;
+  padding-left: 3%;
 }
 
 .links {
-  font-size: 0.938rem;
+  font-size: 1.125rem;
 }
 
 .about{
