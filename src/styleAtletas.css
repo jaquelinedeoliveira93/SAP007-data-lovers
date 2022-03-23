@@ -67,13 +67,9 @@
 
 .Order-container, .ordering-medal {
   width: 5.063rem;
+  margin-right: 1.25rem;
 }
 
-.ordering-medal {
-  margin-right: 23px;
-  margin-left: 23px;
-
-}
 
 .btn {
   border: 1px solid;
