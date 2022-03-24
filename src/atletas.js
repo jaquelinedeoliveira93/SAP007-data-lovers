@@ -56,3 +56,11 @@ function clearAll(){
   window.location.reload();
 }
 clearOrderandFilter.addEventListener("click", clearAll);
+
+// Voltar ao topo
+
+const voltarTopo = document.getElementById("voltar-topo");
+
+voltarTopo.addEventListener("click", function(){
+  window.scrollTo(0,0);
+});
