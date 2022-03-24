@@ -39,3 +39,9 @@ buttonClean.addEventListener("click", cleanOrder)
 function cleanOrder() {
   window.location.reload();
 }
+
+const voltarTopo = document.getElementById("voltar-topo");
+
+voltarTopo.addEventListener("click", function(){
+  window.scrollTo(0,0);
+});

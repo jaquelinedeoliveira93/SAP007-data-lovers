@@ -77,8 +77,14 @@
   padding-top: 0.5rem;
   color: whitesmoke;
 }
-
+.topo{
+  position: fixed;
+  bottom: 3.125rem;
+  right: 3.125rem;
+  border:none;
+}
 .footer {
+  font-size: 20px;
   text-align: center;
   padding-top: 11%;
   padding-bottom: 1%;
