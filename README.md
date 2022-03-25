@@ -7,7 +7,7 @@
 
 
 ---
-<img src="src/Olímpiadas Data Lovers.png" alt="OlímpiadasDL">
+<img src="src/img/Olímpiadas Data Lovers.png" alt="OlímpiadasDL">
 
 ## Índice
 
@@ -32,11 +32,11 @@ Escolhemos dois tipos de usuários para adequar uma aplicação que se baseasse 
 
 **Usuário 1**
 
-<img src="src/História_do_usuário_-_1.png" alt="Usuário 1">
+<img src="src/img/História_do_usuário_-_1.png" alt="Usuário 1">
 
 **Usuário 2**
 
-<img src="src/História_do_usuário_-_2.png" alt="Usuário 2">
+<img src="src/img/História_do_usuário_-_2.png" alt="Usuário 2">
 
 ## Desenho de interface do usuário
 

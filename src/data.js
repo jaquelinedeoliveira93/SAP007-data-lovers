@@ -82,3 +82,5 @@ export const sortCountry = (athletes, selectCountry) => {
   }
 }
 
+//cálculo de porcentagem
+

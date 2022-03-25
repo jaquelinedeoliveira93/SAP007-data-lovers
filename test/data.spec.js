@@ -2,11 +2,11 @@ import { describe } from 'eslint/lib/rule-tester/rule-tester';
 import { AZsort, filterAth, filterMedal, filterSport, sortCountry } from '../src/data.js';
 
 const dataCards = [
-  {"name": "Davit Gochayevich Chakvetadze",},
-  {"name": "Miles Cleveland Chamley-Watson",},
-  {"name": "Andre De Grasse",},
-  {"name": "David Sagitovich Belyavsky",},
-  {"name": "David Edward Plummer",},
+  { "name": "Davit Gochayevich Chakvetadze" },
+  { "name": "Miles Cleveland Chamley-Watson" },
+  { "name": "Andre De Grasse" },
+  { "name": "David Sagitovich Belyavsky" },
+  { "name": "David Edward Plummer" },
 ];
 
 const nameAthlete = [
@@ -39,11 +39,11 @@ describe("AZsort", () => {
   });
   it("should return athlete sort A-Z", () => {
     const orderAthleteAZ = [
-    { "name": "Andre De Grasse", },
-    { "name": "David Edward Plummer",},
-    { "name": "David Sagitovich Belyavsky",},
-    { "name": "Davit Gochayevich Chakvetadze" },
-    { "name": "Miles Cleveland Chamley-Watson" },
+      { "name": "Andre De Grasse", },
+      { "name": "David Edward Plummer", },
+      { "name": "David Sagitovich Belyavsky", },
+      { "name": "Davit Gochayevich Chakvetadze" },
+      { "name": "Miles Cleveland Chamley-Watson" },
     ];
     expect(AZsort(dataCards, "A-Z")).toEqual(orderAthleteAZ);
   });
@@ -98,6 +98,8 @@ describe("filterMedal", () => {
   it('search by medal', () => {
     const Medal = filterMedal(ChooseMedal, "Silver")
     expect(Medal).toEqual([{ "medal": "Silver" }]);
+  });
+});
 
 describe("filterAth", () => {
   it("should be a function", () => {
