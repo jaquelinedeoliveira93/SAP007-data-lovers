@@ -1,7 +1,7 @@
-import {sortCountry} from './data.js';
+import { sortCountry } from './data.js';
 import data from './data/athletes/athletes.js';
 
-function showCards(data){
+function showCards(data) {
   const listCountry = data.reduce((previousValue, currentAthlete) => {
     let country = currentAthlete.team;
     if (country in previousValue) {
@@ -22,13 +22,13 @@ function showCards(data){
           <li class="contents-country">Total Athletes: ${listCountry[country].length}</li>
         </ol>
       </div>`
-    }
+  }
   document.getElementById("cards-countries").innerHTML = cardsCountry;
 }
 showCards(data.athletes)
 
 document.getElementById("ordering-country").addEventListener("change", changeSelectCountry)
-function changeSelectCountry (evento){
+function changeSelectCountry(evento) {
   const selectCountry = evento.target.value
   const result = sortCountry(data.athletes, selectCountry)
   showCards(result)
@@ -40,8 +40,8 @@ function cleanOrder() {
   window.location.reload();
 }
 
-const voltarTopo = document.getElementById("voltar-topo");
+const back = document.getElementById("backtoTop");
 
-voltarTopo.addEventListener("click", function(){
-  window.scrollTo(0,0);
+back.addEventListener("click", function () {
+  window.scrollTo(0, 0);
 });

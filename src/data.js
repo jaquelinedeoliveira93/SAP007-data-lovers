@@ -9,7 +9,7 @@ export const filterAth = (athletes, name) => {
 
 //Filtro por medalha
 
-export const filterMedal =  (athletes, medal) => {
+export const filterMedal = (athletes, medal) => {
   return athletes.filter(medalha => {
     return medalha.medal === (medal)
   });
@@ -17,7 +17,7 @@ export const filterMedal =  (athletes, medal) => {
 
 //Filtro por esporte
 
-export const filterSport =  (athletes, sport) => {
+export const filterSport = (athletes, sport) => {
   return athletes.filter(esporte => {
     return esporte.sport === (sport)
   });
@@ -27,38 +27,17 @@ export const filterSport =  (athletes, sport) => {
 
 export const AZsort = (athletes, selectSort) => {
   if (selectSort === "A-Z") {
-    return athletes.sort((a, b) => {
-      const AlphabetA = a.name.toUpperCase();
-      const AlphabetZ = b.name.toUpperCase();
-      if (AlphabetA < AlphabetZ) {
-        return -1;
-      }
-      if (AlphabetA > AlphabetZ) {
-        return 1;
-      }
-      return 0;
-
-    });
+    return athletes.sort((a, b) => (a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1))
   } else {
-    return athletes.sort((a, b) => {
-      const AlphabetA = a.name.toUpperCase();
-      const AlphabetZ = b.name.toUpperCase();
-      if (AlphabetA < AlphabetZ) {
-        return 1;
-      }
-      if (AlphabetA > AlphabetZ) {
-        return -1;
-      }
-      return 0;
-
-    });
+    return athletes.sort((a, b) => (a.name.toUpperCase() > b.name.toUpperCase() ? -1 : 1))
   }
-}
-
+};
 export const sortCountry = (athletes, selectCountry) => {
-  if(selectCountry === "a-z") {
+
+  if (selectCountry === "a-z") {
     return athletes.sort((a, b) => (a.team > b.team ? 1 : -1))
-} else {
+  } else {
     return athletes.sort((a, b) => (a.team > b.team ? -1 : 1))
   }
 }
+
