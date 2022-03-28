@@ -98,7 +98,8 @@ describe("filterMedal", () => {
   it('search by medal', () => {
     const Medal = filterMedal(ChooseMedal, "Silver")
     expect(Medal).toEqual([{ "medal": "Silver" }]);
-
+  })
+})
 describe("filterAth", () => {
   it("should be a function", () => {
     expect(typeof filterAth).toBe("function");
