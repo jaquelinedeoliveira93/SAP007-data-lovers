@@ -1,11 +1,12 @@
 
- //Filtro por nome de atleta
+//Filtro por nome de atleta
 
-  export const filterAth = (athletes, name) => {
-    return athletes.filter(atleta => {
-    return atleta.name.toLowerCase().includes (name.toLowerCase())
-    });
-  }
+export const filterAth = (athletes, name) => {
+  return athletes.filter(atleta => {
+    return atleta.name.toLowerCase().includes(name.toLowerCase())
+  });
+}
+
 //Filtro por medalha
 
 export const filterMedal =  (athletes, medal) => {
@@ -13,6 +14,7 @@ export const filterMedal =  (athletes, medal) => {
     return medalha.medal === (medal)
   });
 }
+
 //Filtro por esporte
 
 export const filterSport =  (athletes, sport) => {
@@ -24,61 +26,39 @@ export const filterSport =  (athletes, sport) => {
 //Ordenação de A-Z e Z-A
 
 export const AZsort = (athletes, selectSort) => {
-  if (selectSort === "A-Z"){
+  if (selectSort === "A-Z") {
     return athletes.sort((a, b) => {
       const AlphabetA = a.name.toUpperCase();
       const AlphabetZ = b.name.toUpperCase();
-      if (AlphabetA < AlphabetZ){
+      if (AlphabetA < AlphabetZ) {
         return -1;
       }
-      if (AlphabetA > AlphabetZ){
+      if (AlphabetA > AlphabetZ) {
         return 1;
       }
       return 0;
 
-    });
-   } else {
-    return athletes.sort((a, b) => {
-      const AlphabetA = a.name.toUpperCase();
-      const AlphabetZ = b.name.toUpperCase();
-      if (AlphabetA < AlphabetZ){
-        return 1;
-      }
-      if (AlphabetA > AlphabetZ){
-        return -1;
-      }
-      return 0;
-
-    });
-   }
-  }
-
-
-export const sortCountry = (athletes, selectCountry) => {
-  if (selectCountry === "a-z"){
-    return athletes.sort((a, z) => {
-      const countryA = a.team;
-      const countryZ = z.team;
-      if (countryA < countryZ) {
-        return -1;
-      }
-      if (countryA > countryZ) {
-        return 1;
-      }
-      return 0;
     });
   } else {
-    return athletes.sort((a, z) => {
-      const countryA = a.team;
-      const countryZ = z.team;
-      if (countryA < countryZ) {
+    return athletes.sort((a, b) => {
+      const AlphabetA = a.name.toUpperCase();
+      const AlphabetZ = b.name.toUpperCase();
+      if (AlphabetA < AlphabetZ) {
         return 1;
       }
-      if (countryA > countryZ) {
+      if (AlphabetA > AlphabetZ) {
         return -1;
       }
       return 0;
+
     });
   }
 }
 
+export const sortCountry = (athletes, selectCountry) => {
+  if(selectCountry === "a-z") {
+    return athletes.sort((a, b) => (a.team > b.team ? 1 : -1))
+} else {
+    return athletes.sort((a, b) => (a.team > b.team ? -1 : 1))
+  }
+}
