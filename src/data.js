@@ -6,6 +6,7 @@ export const filterAth = (athletes, name) => {
     return atleta.name.toLowerCase().includes(name.toLowerCase())
   });
 }
+
 //Filtro por medalha
 
 export const filterMedal = (athletes, medal) => {
@@ -13,6 +14,7 @@ export const filterMedal = (athletes, medal) => {
     return medalha.medal === (medal)
   });
 }
+
 //Filtro por esporte
 
 export const filterSport = (athletes, sport) => {
@@ -24,7 +26,6 @@ export const filterSport = (athletes, sport) => {
 //Ordenação de A-Z e Z-A
 
 export const AZsort = (athletes, selectSort) => {
-
   if (selectSort === "A-Z") {
     return athletes.sort((a, b) => (a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1))
   } else {
@@ -39,5 +40,4 @@ export const sortCountry = (athletes, selectCountry) => {
     return athletes.sort((a, b) => (a.team > b.team ? -1 : 1))
   }
 }
-
 
