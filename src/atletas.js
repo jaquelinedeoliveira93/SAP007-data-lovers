@@ -15,8 +15,8 @@ function showCards(data) {
         </ol>
       </div>`
   });
-  
-   document.getElementById("cards-atletas").innerHTML = cartasAtletas.join("");
+
+  document.getElementById("cards-atletas").innerHTML = cartasAtletas.join("");
 }
 
 showCards(data.athletes)
