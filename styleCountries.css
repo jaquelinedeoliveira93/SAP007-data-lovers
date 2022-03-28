@@ -78,7 +78,15 @@
   color: whitesmoke;
 }
 
+.top {
+  position: fixed;
+  bottom: 3.125rem;
+  right: 3.125rem;
+  border: none;
+}
+
 .footer {
+  font-size: 1.25rem;
   text-align: center;
   padding-top: 11%;
   padding-bottom: 1%;

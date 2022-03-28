@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Olímpiadas Rio 2016</title>
+    <link rel="stylesheet" href="styleAtletas.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Olímpiadas Rio 2016 </title>
-  <link rel="stylesheet" href="styleAtletas.css" />
-</head>
-
-<body>
-
-  <header>
-    <div class="banner-oficial">
-      <img src="img/bannerOficial2.png" alt="logo da Olímpiadas Rio 2016 com fundo colorido" class="banner">
-    </div>
-
-  </header>
-  <nav>
-    <ul class="menu">
-      <li class="item-menu"><a href="index.html" id="Home" class="links">🏅Home</a></li>
-      <li class="item-menu"><a href="atletas.html" id="Ath" class="links">🏅Atletas</a></li>
-      <li class="item-menu"><a href="countries.html" id="countries" class="links">🏅Países</a></li>
-    </ul>
-  </nav>
-     <section class="barraMenu">
-       <input type="text" placeholder="Athlete" class="athField flexItem" id="filterAth">
-       <select class="Order-container flexItem" id="AZsort">
+  <body>
+    <header>
+      <div class="banner-oficial">
+        <img
+          src="img/bannerOficial2.png"
+          alt="logo da Olímpiadas Rio 2016 com fundo colorido"
+          class="banner"
+        />
+      </div>
+    </header>
+    <nav>
+      <ul class="menu">
+        <li class="item-menu">
+          <a href="index.html" id="Home" class="links">🏅Home</a>
+        </li>
+        <li class="item-menu">
+          <a href="atletas.html" id="Ath" class="links">🏅Atletas</a>
+        </li>
+        <li class="item-menu">
+          <a href="countries.html" id="countries" class="links">🏅Países</a>
+        </li>
+      </ul>
+    </nav>
+    <form class="menuBar">
+      <input
+        type="text"
+        placeholder="Athlete"
+        class="athField flexItem"
+        id="filterAth"
+      />
+      <select class="Order-container flexItem" id="AZsort">
         <option selected disabled value="">Order by:</option>
         <option value="A-Z" id="opAZ">A-Z</option>
         <option value="Z-A" id="opZA">Z-A</option>
       </select>
-      <select id="ordering-medal" class="ordering-medal flexItem">
+      <select id="ordering-medal" class="ordering-medal flexItem filter">
         <option selected disabled value="">🏅Medal</option>
         <option value="Gold">Gold</option>
         <option value="Silver">Silver</option>
         <option value="Bronze">Bronze</option>
       </select>
-      <select id="filterSport" class="order-sport flexItem">
+      <select id="filterSport" class="order-sport flexItem filter">
         <option selected disabled value="">Sports</option>
         <option value="Rowing">Rowing</option>
         <option value="Taekwondo">Taekwondo</option>
@@ -52,7 +64,7 @@
         <option value="Rhythmic Gymnastics">Rhythmic Gymnastics</option>
         <option value="Weightlifting">Weightlifting</option>
         <option value="Equestrianism">Equestrianism</option>
-        <option value="Badminton"> Badminton </option>
+        <option value="Badminton">Badminton</option>
         <option value="Water Polo">Water Polo</option>
         <option value="Football">Football</option>
         <option value="Fencing">Fencing</option>
@@ -71,32 +83,72 @@
         <option value="Modern Pentathlon">Modern Pentathlon</option>
         <option value="Golf">Golf</option>
         <option value="Trampolining">Trampolining</option>
-              </select>
+      </select>
 
       <button class="btn flexItem" id="refresh">Clean</button>
-  </section>
+    </form>
 
+    <main id="cards-atletas" class="container-atletas"></main>
 
-  <main id="cards-atletas" class="container-atletas"></main>
+    <button class="top" id="backtoTop">
+      <img src="alinhamento-superior.png" alt="" width="50" height="50" />
+    </button>
 
+    <footer class="footer margem">
+      Developed by: Jaqueline de Oliveira
+      <a
+        href="https://github.com/jaquelinedeoliveira93"
+        target="_blank"
+        icon="logo-github"
+      >
+        <img
+          src="img/logo-github.png"
+          alt="logo-git"
+          width="25"
+          height="25"
+          class="gitHub-linkedin"
+      /></a>
 
+      <a
+        href="https://www.linkedin.com/in/jaquelinedeoliveiraa/"
+        target="_blank"
+        icon="logo-linkedin"
+      >
+        <img
+          src="img/logo-linkedin.png"
+          alt="logo-link"
+          width="25"
+          height="25"
+          class="gitHub-linkedin"
+      /></a>
 
-  <footer class="rodapé margem">
-    Developed by:
-    Jaqueline de Oliveira
-    <a href="https://github.com/jaquelinedeoliveira93" target="_blank" icon="logo-github">
-      <img src="img/logo-github.png" alt="logo-git" width="25" height="25" class="gitHub-linkedin"></a>
+      Larissa Santos
+      <a
+        href="https://github.com/Larasantos97"
+        target="_blank"
+        icon="logo-github"
+      >
+        <img
+          src="img/logo-github.png"
+          alt="logo-git"
+          width="25"
+          height="25"
+          class="gitHub-linkedin"
+      /></a>
 
-    <a href="https://www.linkedin.com/in/jaquelinedeoliveiraa/" target="_blank" icon="logo-linkedin">
-      <img src="img/logo-linkedin.png" alt="logo-link" width="25" height="25" class="gitHub-linkedin"></a>
-
-    Larissa Santos
-    <a href="https://github.com/Larasantos97" target="_blank" icon="logo-github">
-      <img src="img/logo-github.png" alt="logo-git" width="25" height="25" class="gitHub-linkedin"></a>
-
-    <a href="https://www.linkedin.com/in/larissa-dos-reis-santos-aaa8b415a/" target="_blank" icon="logo-linkedin">
-      <img src="img/logo-linkedin.png" alt="logo-link" width="25" height="25" class="gitHub-linkedin"></a>
-  </footer>
+      <a
+        href="https://www.linkedin.com/in/larissa-dos-reis-santos-aaa8b415a/"
+        target="_blank"
+        icon="logo-linkedin"
+      >
+        <img
+          src="img/logo-linkedin.png"
+          alt="logo-link"
+          width="25"
+          height="25"
+          class="gitHub-linkedin"
+      /></a>
+    </footer>
     <div id="root"></div>
     <script src="atletas.js" type="module"></script>
   </body>
