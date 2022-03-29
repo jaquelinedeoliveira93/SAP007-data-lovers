@@ -99,7 +99,7 @@
 
 .flex-item-atleta {
   width: 10rem;
-  padding-bottom:2rem;
+  padding-bottom: 2rem;
 }
 
 .cards-atletas {
@@ -133,6 +133,7 @@
   padding-top: 11%;
   padding-bottom: 1%;
 }
+
 @media (min-width: 320px) {
 
   .links {
@@ -148,7 +149,9 @@
   }
 
   .menuBar {
+
     margin-top: 21.4em;
+ 
 
   }
 

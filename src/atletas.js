@@ -15,8 +15,8 @@ function showCards(data) {
         </ol>
       </div>`
   });
-  
-   document.getElementById("cards-atletas").innerHTML = cartasAtletas.join("");
+
+  document.getElementById("cards-atletas").innerHTML = cartasAtletas.join("");
 }
 
 showCards(data.athletes)
@@ -25,11 +25,13 @@ showCards(data.athletes)
 //Função para que o card apareça assim que o usuário escrever o nome do atleta
 
 document.getElementById("filterAth").addEventListener("keyup", changeFilter)
+
 function changeFilter(evento) {
   const nome = evento.target.value
   const resultado = filterAth(data.athletes, nome)
   showCards(resultado)
 }
+
 //Função para que o card apareça de acordo com o esporte escolhido
 
 document.getElementById("filterSport").addEventListener("change", changeFilterSport)
@@ -38,6 +40,7 @@ function changeFilterSport(evento) {
   const resultadoEsporte = filterSport(data.athletes, esporte)
   showCards(resultadoEsporte)
 }
+
 //Função para que o card apareça assim que clicar nas opções de A-Z ou Z-A
 
 document.getElementById("AZsort").addEventListener("change", changeSelect)
@@ -55,6 +58,7 @@ function selectMedal(evento) {
   const resultadoMedal = filterMedal(data.athletes, medalhaSelect)
   showCards(resultadoMedal)
 }
+
 //Botão limpar
 
 const clearOrderandFilter = document.getElementById("refresh");
